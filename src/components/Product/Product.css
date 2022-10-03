@@ -37,7 +37,15 @@
     border: none;
     position: absolute;
     bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
 }
 .btn-cart:hover{
     background-color: orange;
+}
+.btn-cart-text{
+    margin-right: 10px;
 }
