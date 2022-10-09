@@ -5,6 +5,7 @@ import Shop from './components/Shop/Shop';
 import Main from './Layouts/Main';
 import Orders from './components/Orders/Orders';
 import Inventory from './components/Inventory/Inventory';
+import { productsAndCardLoader } from './loaders/productsAndCardLoader';
 
 
 function App() {
@@ -15,10 +16,12 @@ function App() {
       children: [
         {
           path:'/',
+          loader: () =>  fetch('products.json'),
           element: <Shop></Shop>
         },
         {
           path: '/orders',
+          loader: productsAndCardLoader,
           element:<Orders></Orders>
         },
         {
